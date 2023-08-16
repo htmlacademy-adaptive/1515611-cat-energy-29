@@ -1,0 +1,76 @@
+.features {
+  padding: 0 20px 54px 20px;
+}
+
+
+.features__title {
+  .no-list-style();
+  margin: 0 0 40px 0;
+  font-size: 36px;
+  font-family: "Oswald Regular", sans-serif;
+  line-height: 40px;
+  font-style: normal;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.features__item {
+  position: relative;
+  padding: 0 0 0 80px;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+
+  &--leaf::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url("../images/icons/leaf.svg");
+    top: 0;
+    left: 0;
+  }
+
+  &--powder::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url("../images/icons/powder.svg");
+    top: 0;
+    left: 0;
+  }
+
+  &--cutlery::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url("../images/icons/cutlery.svg");
+    top: 0;
+    left: 0;
+  }
+
+  &--clock::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url("../images/icons/clock.svg");
+    top: 0;
+    left: 0;
+  }
+}
