@@ -1,0 +1,187 @@
+.programs {
+  padding: 23px;
+}
+
+.food-programs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .no-list-style() ;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .food-programs__list {
+    display: flex;
+  }
+}
+
+.food-programs__title,
+.food-programs__text {
+  margin: 0;
+  padding: 0;
+}
+
+.food-programs__title {
+  color: @black;
+  font-family: "Oswald Regular", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.food-programs__text {
+  margin-bottom: 41px;
+  color: @black;
+  font-family: "Lato Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  &--::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+    margin-top: 23px;
+  }
+}
+
+.food-programs__item {
+  background-color: @basic-grey;
+  padding: 27px 20px 20px 20px;
+
+  &--lose {
+    display: block;
+    position: relative;
+  }
+
+  &--lose::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 50px;
+    background-image: url("../images/icons/black-cat.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 11px;
+  }
+
+  &--gain {
+    display: block;
+    position: relative;
+    padding-bottom: 18px;
+  }
+
+  &--gain::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 50px;
+    background-image: url("../images/icons/black-panther.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    top: 22px;
+    left: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .food-programs__item {
+    &--lose::before {
+      top: 50%;
+      left: 80%;
+    }
+
+    &--lose::after {
+      top: 50%;
+      left: 80%;
+    }
+  }
+}
+
+.food-programs__link {
+  color: @black;
+  text-align: center;
+  font-family: "Oswald Regular", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero-btn {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.food-programs__link::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  top: -2px;
+  left: 14px;
+  background-image: url("../images/icons/arrow.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .food-programs__link {
+    margin-top: 48px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .food-programs__link {
+    margin-top: 0;
+  }
+}
+
+.food-programs__item {
+  position: relative;
+}
+
+.food-programs__item::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .food-programs__item::before {
+    top: 92px;
+    left: auto;
+    right: 63px;
+  }
+
+  .food-programs__text {
+    max-width: 500px;
+  }
+}
+
+.title-lose {
+  padding-left: 10px;
+}
+
+.title-gain {
+  padding-left: 40px;
+}
