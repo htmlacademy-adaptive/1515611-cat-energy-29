@@ -1,0 +1,118 @@
+.slider {
+  width: 280px;
+  height: 256px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__block {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 280px;
+  height: 256px;
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 256px;
+  list-style-type: none;
+
+  &::before {
+    content: "";
+    width: 280px;
+    height: 256px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.slider__item--before {
+  background: #eaeaea;
+  z-index: 5;
+  width: 50%;
+  transition: all 2s;
+  overflow: hidden;
+  border-right: 4px solid #666666;
+
+  &::before {
+    background-image: url("../images/photos/viewport-mobile, fat-state.png");
+  }
+}
+
+.slider--state-before .slider__item--before {
+  width: 100%;
+}
+
+.slider--state-after .slider__item--before {
+  width: 0;
+}
+
+
+.slider__item--after {
+  z-index: 1;
+
+  &::before {
+    background-image: url("../images/photos/viewport-mobile, slim-state.png");
+  }
+}
+
+.slider__button {
+  width: 44px;
+  height: 44px;
+  display: block;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url("../images/icons/slider-button.svg");
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  cursor: pointer;
+  transition: all 2s;
+  background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    width: 560px;
+    height: 512px;
+  }
+
+  .slider__block {
+    width: 560px;
+    height: 512px;
+  }
+
+
+  .slider__item {
+    width: 560px;
+    height: 512px;
+
+    &::before {
+      content: "";
+      width: 560px;
+      height: 512px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  .slider__item--before {
+    &::before {
+      background-image: url("../images/photos/viewport-tablet,fat-state.png");
+    }
+  }
+
+  .slider__item--after {
+    &::before {
+      background-image: url("../images/photos/viewport-tablet, slim-state.png");
+    }
+  }
+}

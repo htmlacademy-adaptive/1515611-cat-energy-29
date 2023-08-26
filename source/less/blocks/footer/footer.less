@@ -24,11 +24,35 @@
 
 .footer__contacts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 15px 21px;
   line-height: 20px;
   text-decoration: none;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    display: flex;
+    padding: 56px 24px 70px 31px;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+  }
+
+  .footer-sitelink,
+  .socials-list,
+  .footer-contact {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-site {
+    width: auto;
+    margin-right: 28px;
+  }
+
+  .socials-list {
+    margin-left: 32px;
+  }
 }

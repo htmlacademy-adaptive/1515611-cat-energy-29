@@ -1,12 +1,24 @@
 .example {
-  padding: 24px 11px 14px 22px;
+  padding: 24px 11px 36px 22px;
   background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    background-color:#ffffff;
+    padding: 0;
+  }
 }
 
 .example__wrapper {
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @media (min-width: @tablet-width) {
+    gap: 55px;
+    padding-bottom: 113px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .example__title {
@@ -16,15 +28,33 @@
   font-family: "Oswald Regular", sans-serif;
   line-height: 40px;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    font-family: "Oswald Regular", sans-serif;
+    line-height: 60px;
+    font-weight: 400;
+  }
 }
 
 .results-item__info {
-  font-size: 24px;
+  color: #000000;
+  text-align: center;
   font-family: "Oswald Regular", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0 0 0 41px;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    font-family: "Oswald Regular", sans-serif;
+    line-height: 37px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    min-width: 102px;
+  }
 }
 
 .results-item__text {
@@ -32,17 +62,52 @@
   font-family: "Lato Regular", sans-serif;
   line-height: 12px;
   font-style: normal;
+  width: 77px;
+  margin: 0 auto;
+  text-transform: lowercase;
+  padding: 0 12px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    font-family: "Lato Regular", sans-serif;
+    line-height: 14px;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 126px;
+  }
 }
 
 .example__results-list {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  gap: 54px;
+  column-gap: 32px;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  padding-right: 30px;
+  padding-left: 21px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 103px 143px;
+    column-gap: 80px;
+    padding-left: 16px;
+  }
 }
 
 .example__text {
   margin: 0;
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    font-family: "Lato Regular", sans-serif;
+    line-height: 24px;
+    font-style: normal;
+  }
 }
 
 .example__costs {
@@ -52,4 +117,29 @@
   font-weight: 400;
   text-transform: uppercase;
   padding-left: 46px;
+  margin-bottom: -11px;
+  margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    font-family: "Oswald Regular", sans-serif;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: right;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__results {
+    padding: 10px 0 49px 17px;
+    display: flex;
+    flex-direction: row;
+    gap: 95px;
+  }
+}
+
+.example__results--item {
+  padding-top: 14px;
 }

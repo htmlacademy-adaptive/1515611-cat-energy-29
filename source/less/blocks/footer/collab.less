@@ -3,8 +3,14 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  padding: 27px 21px 24px 23px;
+  padding: 27px 19px 24px 20px;
   gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 163px 163px;
+    gap: 280px;
+    padding: 49px 70px 60px 70px;
+  }
 }
 
 .collab__title {
@@ -14,6 +20,14 @@
   text-transform: uppercase;
   font-style: normal;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
 }
 
 .collab__map {
@@ -24,4 +38,26 @@
   position: absolute;
   top: 100px;
   left: 52px;
+}
+
+@media (min-width: @tablet-width) {
+  .collab__contact {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .collab__contact--town {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .collab__map-image {
+    width: 100%;
+    min-height: 400px;
+  }
 }

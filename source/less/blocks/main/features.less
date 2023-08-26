@@ -1,5 +1,9 @@
 .features {
   padding: 0 20px 54px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 31px 148px 30px;
+  }
 }
 
 
@@ -10,6 +14,13 @@
   font-family: "Oswald Regular", sans-serif;
   line-height: 40px;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
@@ -19,6 +30,14 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 240px 260px;
+    grid-row-gap: 133px;
+    grid-column-gap: 144px;
+    counter-reset: section;
+  }
 }
 
 .features__item {
@@ -29,6 +48,14 @@
   line-height: 18px;
   font-weight: 400;
 
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 110px 0 0 0;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 
   &--leaf::before {
     content: "";
@@ -37,8 +64,16 @@
     height: 60px;
     position: absolute;
     background-image: url("../images/icons/leaf.svg");
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: contain;
+      bottom: 103px;
+    }
   }
 
   &--powder::before {
@@ -48,8 +83,16 @@
     height: 60px;
     position: absolute;
     background-image: url("../images/icons/powder.svg");
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: contain;
+      bottom: 103px;
+    }
   }
 
   &--cutlery::before {
@@ -59,8 +102,16 @@
     height: 60px;
     position: absolute;
     background-image: url("../images/icons/cutlery.svg");
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: contain;
+      bottom: 103px;
+    }
   }
 
   &--clock::before {
@@ -70,7 +121,41 @@
     height: 60px;
     position: absolute;
     background-image: url("../images/icons/clock.svg");
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: contain;
+      bottom: 103px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features__item--leaf::after {
+    right: 99px;
+    top: -41px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .features__item::after {
+    content: counter(section) " ";
+    counter-increment: section;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: "Oswald regular", sans-serif;
+    font-size: 280px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 280px;
+    position: absolute;
+    right: 12px;
+    bottom: -58px;
+    z-index: -1;
   }
 }
