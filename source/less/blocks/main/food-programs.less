@@ -1,10 +1,8 @@
-.programs {
-  padding: 23px;
 
-  @media (min-width: @tablet-width) {
-    padding: 0 30px 0 30px;
-  }
+.food-programs {
+  margin: 0 auto;
 }
+
 
 .food-programs__list {
   display: flex;
@@ -13,19 +11,33 @@
   .no-list-style() ;
   margin: 0 auto;
   padding: 0;
-}
 
-@media (min-width: @desktop-width) {
-  .food-programs__list {
+  @media (min-width: @desktop-width) {
     display: flex;
+    flex-direction: row;
+    column-gap: 75px;
   }
 }
+
 
 .food-programs__title,
 .food-programs__text {
   margin: 0;
   padding: 0;
 }
+
+.programs {
+  padding: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 230px 0 230px;
+  }
+}
+
 
 .food-programs__title {
   color: @black;
@@ -36,7 +48,7 @@
   line-height: 37px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     color: @black;
@@ -60,13 +72,29 @@
   font-weight: 400;
   line-height: 18px;
 
-  &--::after {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 102px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 33px;
+    padding: 0 65px 0 0;
+  }
+
+  &::after {
     content: "";
     display: block;
     width: 100%;
     height: 1px;
     background-color: #d9d9d9;
     margin-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -75,9 +103,10 @@
   padding: 27px 20px 20px 20px;
   position: relative;
 
-  &--lose {
-    display: block;
+
+  &--gain {
     position: relative;
+    padding-bottom: 18px;
   }
 
   &--lose::after {
@@ -94,6 +123,24 @@
     left: 11px;
   }
 
+  &--gain::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 50px;
+    background-image: url("../images/icons/black-panther.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 2;
+    bottom: 215px;
+    left: 10px;
+
+    @media (min-width: @desktop-width) {
+      bottom: 190px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     &--lose::after {
       content: "";
@@ -105,30 +152,10 @@
       background-position: center center;
       position: absolute;
       z-index: 2;
+      top: 22%;
+      left: 63%;
     }
-  }
 
-  &--gain {
-    display: block;
-    position: relative;
-    padding-bottom: 18px;
-  }
-
-  &--gain::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 50px;
-    background-image: url("../images/icons/black-panther.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 2;
-    bottom: 190px;
-    left: 10px;
-  }
-
-  @media (min-width: @tablet-width) {
     &--gain::after {
       content: "";
       display: block;
@@ -139,22 +166,6 @@
       background-position: center center;
       position: absolute;
       z-index: 2;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .food-programs__item {
-    &--lose::after {
-      top: 22%;
-      left: 63%;
-    }
-
-    &--gain::after {
       top: 26%;
       left: 58%;
     }
@@ -162,6 +173,40 @@
     width: 100%;
     height: 372px;
     padding: 81px 208px 62px 54px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    padding: 76px 0 44px 54px;
+
+    &::after {
+      display: none;
+    }
+
+    &--gain::before {
+      content: "";
+      display: block;
+      width: 268px;
+      height: 200px;
+      background-image: url("../images/icons/black-panther-desktop.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 2;
+      top: 45px;
+      left: 32px;
+    }
+
+    &--lose::before {
+      content: "";
+      display: block;
+      width: 201px;
+      height: 211px;
+      background-image: url("../images/icons/black-cat-desktop.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 2;
+      top: 40px;
+    }
   }
 }
 
@@ -175,6 +220,17 @@
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 48px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-style: normal;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .food-programs__link::after {
@@ -195,46 +251,6 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .food-programs__link {
-    margin-top: 48px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-style: normal;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .food-programs__link {
-    margin-top: 0;
-  }
-}
-
-.food-programs__item::before {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-@media (min-width: @tablet-width) {
-  .food-programs__item::before {
-    top: 92px;
-    left: auto;
-    right: 63px;
-  }
-
-  .food-programs__text {
-    margin-bottom: 58px;
-    color: @black;
-    font-family: "Lato Regular", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    padding: 0 102px 0 0;
-  }
-}
-
 .title-lose {
   padding-left: 10px;
 
@@ -242,6 +258,12 @@
     padding-right: 285px;
     padding-left: 0;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
+    padding-left: 0;
+    margin-bottom: 74px;
   }
 }
 
@@ -251,5 +273,11 @@
   @media (min-width: @tablet-width) {
     padding-right: 240px;
     padding-left: 0;
-}
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-left: 12px;
+    margin-bottom: 73px;
+  }
 }

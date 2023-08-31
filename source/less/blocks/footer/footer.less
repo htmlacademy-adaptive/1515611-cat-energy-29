@@ -1,6 +1,12 @@
 
 .footer__sitelink {
   margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 128px;
+    padding: 5px 0;
+  }
 }
 
 .footer-sitelink {
@@ -20,6 +26,10 @@
   list-style-type: none;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    transform: translate(19px, 0);
+  }
 }
 
 .footer__contacts {
@@ -35,13 +45,13 @@
 @media (min-width: @tablet-width) {
   .footer__wrapper {
     display: flex;
-    padding: 56px 24px 70px 31px;
+    padding: 53px 28px 90px 32px;
     justify-content: space-between;
     background-color: #f2f2f2;
   }
 
   .footer-sitelink,
-  .socials-list,
+  .footer__socials-list,
   .footer-contact {
     padding: 0;
     margin: 0;
@@ -51,8 +61,12 @@
     width: auto;
     margin-right: 28px;
   }
+}
 
-  .socials-list {
-    margin-left: 32px;
+.footer__wrapper {
+  @media (min-width: @desktop-width) {
+    padding: 77px 110px;
+    width: 1440px;
+    margin: -20px 121px 0 121px;
   }
 }

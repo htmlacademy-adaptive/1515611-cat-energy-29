@@ -1,0 +1,42 @@
+
+.main-navigation__toggle {
+  position: absolute;
+  right: 23px;
+  top: -73px;
+}
+
+.main-nav--closed::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 22px;
+  display: block;
+  background-color: #ffffff;
+  background-image: url("../images/icons/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.main-nav--opened::after {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  background-image: url("../images/icons/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation {
+    display: none;
+  }
+}
+

@@ -1,0 +1,44 @@
+
+.services-list {
+  display: block;
+  text-decoration: none;
+  background-color: #ffffff;
+  .no-list-style();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+}
+
+.services-list__link {
+  .no-list-decor();
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Oswald Regular", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  padding: 23px 10px 22px;
+  text-align: center;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.services-list__item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.services-list__item:first-child {
+  border-top: 1px solid #e6e6e6;
+}
+

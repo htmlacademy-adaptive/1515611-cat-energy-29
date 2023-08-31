@@ -4,20 +4,31 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    &::after {
-      content: "";
-      width: 709px;
-      height: 609px;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background-image: url("../images/photos/index-can-tablet.png");
-    }
+    width: 768px;
+    padding-bottom: 297px;
   }
 
-  @media (min-width: 768px) {
-    &::after {
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    width: 1440px;
+    padding-bottom: 38px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 167px;
+    left: 21px;
+    width: 100%;
+    height: 270px;
+    background-image: url("../images/photos/index-can-mobile.png");
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-position: center center;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
       content: "";
       width: 709px;
       height: 609px;
@@ -29,26 +40,42 @@
       z-index: -1;
     }
   }
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 167px;
-  left: 21px;
-  width: 100%;
-  height: 270px;
-  background-image: url("../images/photos/index-can-mobile.png");
-  background-repeat: no-repeat;
-  z-index: 2;
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      width: 50%;
+      height: calc(100% + 115px);
+      position: absolute;
+      right: 0;
+      top: -103px;
+      background: url("../images/photos/green-cat-desktop-width.jpg") no-repeat right top;
+      z-index: -2;
+    }
 
-  @media (min-width: @tablet-width) {
-    display: none;
+    &::before {
+      content: "";
+      width: 709px;
+      height: 609px;
+      position: absolute;
+      top: -33px;
+      left: 58%;
+      transform: translateX(-50%);
+      background-image: url("../images/photos/index-can-desktop.png");
+      z-index: -1;
+    }
   }
 }
 
 .hero__container {
   padding: 0 0 135px 0;
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 74px 795px 0 0;
+  }
 }
 
 .hero__btn {
@@ -61,6 +88,19 @@
   position: relative;
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px;
+    width: 244px;
+    text-align: center;
+    margin: 0;
+    height: 53px;
+    position: relative;
+    bottom: 230px;
+    margin-left: 119px;
+  }
 }
 
 .hero__wrapper {
@@ -72,7 +112,7 @@
   content: "";
   position: absolute;
   display: block;
-  background-image: url("../images/photos/Green_cat.png");
+  background-image: url("../images/photos/green_cat.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center center;
@@ -95,6 +135,18 @@
   color: #ffffff;
   text-align: center;
   padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    padding: 27px 104px 40px 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 36px 38px 189px;
+  }
 }
 
 .hero__text {
@@ -106,54 +158,8 @@
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-}
 
-.button {
-  display: block;
-  color: #ffffff;
-  background-color: @basic-green;
-  text-align: center;
-  font-family: "Oswald Regular", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  width: 280px;
-  height: 40px;
-  padding-top: 12px;
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-@media (min-width: @tablet-width) {
-  .hero {
-    width: 768px;
-    padding-bottom: 296px;
-  }
-
-  .hero__btn {
-    font-size: 20px;
-    line-height: 20px;
-    padding: 16px;
-    width: 244px;
-    text-align: center;
-    margin: 0;
-    height: 53px;
-    position: relative;
-    bottom: 230px;
-    margin-left: 119px;
-  }
-
-  .hero__title {
-    color: #000000;
-    font-size: 60px;
-    line-height: 60px;
-    text-align: left;
-    padding: 27px 104px 40px 119px;
-  }
-
-  .hero__text {
+  @media (min-width: @tablet-width) {
     color: #000000;
     font-size: 20px;
     line-height: 20px;
@@ -162,14 +168,9 @@
     padding-left: 120px;
     margin: 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .hero {
-    flex-direction: row;
-    width: 1440px;
-    padding: 0 110px;
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
   }
 }
-
 

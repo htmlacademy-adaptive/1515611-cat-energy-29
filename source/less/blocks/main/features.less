@@ -1,15 +1,28 @@
 .features {
-  padding: 0 20px 54px 20px;
+  padding: 0 20px 37px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 52px 31px 148px 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 72px 225px 126px 230px;
+  }
 }
 
+.features__text {
+  padding: 0;
+  margin-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
 
 .features__title {
   .no-list-style();
-  margin: 0 0 40px 0;
+  margin: 0 0 23px 0;
   font-size: 36px;
   font-family: "Oswald Regular", sans-serif;
   line-height: 40px;
@@ -19,14 +32,13 @@
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
-    margin-bottom: 72px;
+    margin-bottom: 64px;
   }
 }
 
 .features__list {
   display: flex;
   flex-direction: column;
-  gap: 26px;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -34,15 +46,21 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 240px 260px;
-    grid-row-gap: 133px;
+    grid-row-gap: 125px;
     grid-column-gap: 144px;
     counter-reset: section;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 70px;
   }
 }
 
 .features__item {
+  display: flex;
   position: relative;
-  padding: 0 0 0 80px;
   font-family: "Lato Regular", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -50,7 +68,7 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    padding: 110px 0 0 0;
+    padding: 119px 0 0 0;
     font-family: "Lato Regular", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -65,8 +83,9 @@
     position: absolute;
     background-image: url("../images/icons/leaf.svg");
     background-repeat: no-repeat;
-    top: 0;
+    top: 13px;
     left: 0;
+    flex-shrink: 0;
 
     @media (min-width: @tablet-width) {
       width: 80px;
@@ -84,8 +103,9 @@
     position: absolute;
     background-image: url("../images/icons/powder.svg");
     background-repeat: no-repeat;
-    top: 0;
+    top: 13px;
     left: 0;
+    flex-shrink: 0;
 
     @media (min-width: @tablet-width) {
       width: 80px;
@@ -103,8 +123,9 @@
     position: absolute;
     background-image: url("../images/icons/cutlery.svg");
     background-repeat: no-repeat;
-    top: 0;
+    top: 13px;
     left: 0;
+    flex-shrink: 0;
 
     @media (min-width: @tablet-width) {
       width: 80px;
@@ -122,8 +143,9 @@
     position: absolute;
     background-image: url("../images/icons/clock.svg");
     background-repeat: no-repeat;
-    top: 0;
+    top: 13px;
     left: 0;
+    flex-shrink: 0;
 
     @media (min-width: @tablet-width) {
       width: 80px;

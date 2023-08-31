@@ -11,6 +11,20 @@
     gap: 280px;
     padding: 49px 70px 60px 70px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 79px 59px;
+    justify-content: unset;
+    gap: 96px;
+    position: relative;
+    width: 565px;
+    z-index: 10;
+    background-color: #ffffff;
+    top: 35px;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -610px;
+  }
 }
 
 .collab__title {
@@ -32,12 +46,27 @@
 
 .collab__map {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    position: relative;
+    padding: 60px 0 96px;
+  }
 }
 
 .collab__pin {
   position: absolute;
   top: 100px;
   left: 52px;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -129px;
+    left: 908px;
+    z-index: 10;
+    width: 113px;
+    height: 106px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -61,3 +90,32 @@
     min-height: 400px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .collab__map-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+  }
+
+  .collab {
+    margin: 0 121px;
+    position: relative;
+    padding: 60px 0 0;
+  }
+
+  .collab__contact {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
+    gap: 19px;
+  }
+
+  .collab__contact--town {
+    margin: 0;
+  }
+}
+
