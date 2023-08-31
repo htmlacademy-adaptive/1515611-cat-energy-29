@@ -1,0 +1,33 @@
+
+.button {
+  display: block;
+  color: #ffffff;
+  background-color: @basic-green;
+  text-align: center;
+  font-family: "Oswald Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 280px;
+  height: 40px;
+  padding-top: 12px;
+  cursor: pointer;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 120px;
+    width: 244px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 190px;
+    margin-top: 138px;
+  }
+}

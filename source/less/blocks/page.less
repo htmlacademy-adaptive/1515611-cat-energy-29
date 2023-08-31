@@ -15,17 +15,19 @@
   font-weight: 400;
   background-color: #ffffff;
   color: #000000;
-}
 
-@media (min-width: @tablet-width) {
-  .page-body-container {
-    width: 768px;
+
+  @media (min-width: @desktop-width) {
+    &--::after {
+      content: "";
+      width: 50%;
+      background-color: #64a73c;
+      height: 500px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -10;
+    }
   }
 }
 
-@media (min-width: @desktop-width) {
-  .page-body-container {
-    width: 1440px;
-    padding: 0 110px;
-  }
-}
