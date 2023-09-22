@@ -4,8 +4,26 @@
   align-items: center;
   gap: 15px;
   margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    gap: 21px;
+  }
 }
 
 .extra-text-container {
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-bottom: 57px;
+  }
+}
+
+.group-extra__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 21px;
+    column-gap: 58px;
+  }
 }

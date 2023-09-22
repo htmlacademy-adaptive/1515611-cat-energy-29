@@ -21,6 +21,13 @@
   z-index: 5;
   max-width: 222px;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 0 70px;
+    max-width: 655px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .special-title::before {
@@ -32,4 +39,8 @@
   z-index: 1;
   height: 1px;
   border-top: 2px solid #68b738;
+
+  @media (min-width: @tablet-width) {
+    top: 23px;
+  }
 }

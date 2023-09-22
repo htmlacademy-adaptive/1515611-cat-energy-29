@@ -1,6 +1,10 @@
 .form-page__title {
   padding: 30px 0 0 19px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0 0 69px;
+  }
 }
 
 .form-page__text {
@@ -11,4 +15,10 @@
   text-transform: uppercase;
   margin: 0;
   padding: 37px 30px 0 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 52px 310px 0 70px;
+  }
 }
