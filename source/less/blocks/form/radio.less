@@ -1,0 +1,46 @@
+.radio {
+  display: block;
+  font-family: "Oswald Regular", sans-serif;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 13px;
+}
+
+.radio__label {
+  position: relative;
+}
+
+.radio__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 7px;
+  left: -44px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.radio__label::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #68b738;
+  top: 15px;
+  left: -36px;
+  display: none;
+}
+
+.radio__input + .radio__label {
+  cursor: pointer;
+}
+
+.radio__input:checked + .radio__label::after {
+  display: block;
+}
+
