@@ -3,8 +3,9 @@
   border-bottom: 1px solid #d7d7d7;
 
   @media (min-width: @tablet-width) {
-    padding: 88px 70px 0 156px;
-    border: none;
+    padding: 73px 69px 0 69px;
+    min-height: 270px;
+    border-bottom: none;
   }
 }
 
@@ -14,4 +15,12 @@
 
 .group-program__item:last-child {
   margin-bottom: 0;
+}
+
+.group-program__list {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    min-height: 197px;
+    border: 1px solid #d7d7d7;
+  }
 }

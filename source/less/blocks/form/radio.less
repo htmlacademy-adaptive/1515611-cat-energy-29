@@ -7,10 +7,19 @@
   font-weight: 400;
   text-transform: uppercase;
   padding-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    margin: 0;
+  }
 }
 
 .radio__label {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 85px;
+  }
 }
 
 .radio__label::before {
@@ -26,7 +35,8 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    left: -59px;
+    top: -4px;
+    left: 27px;
   }
 }
 
