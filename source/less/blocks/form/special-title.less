@@ -12,6 +12,10 @@
 
 .special-title__container {
   margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .special-title__text {
@@ -28,6 +32,10 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px 0 0;
+  }
 }
 
 .special-title::before {
@@ -42,5 +50,11 @@
 
   @media (min-width: @tablet-width) {
     top: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-text-container::before {
+    top: 85px;
   }
 }

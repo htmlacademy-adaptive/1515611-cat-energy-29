@@ -41,45 +41,49 @@
     </header>
 
     <main class="main-container form-page">
-      <h1 class="inner-title form-page__title">Подбор программы</h1>
-      <p class="inner-text form-page__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="form-page__title-container">
+        <h1 class="inner-title form-page__title">Подбор программы</h1>
+        <p class="inner-text form-page__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form method="post" class="form form-page__form">
-        <fieldset class="form__group group-name">
-          <ul class="form__list group-name__list">
-            <li class="form__item text-input group-name__item">
-              <label for="name" class="text-input__label form-label">Имя:*</label>
-              <input type="text" class="text-input__input" value="Барсик" placeholder="Введите имя питомца" id="name"
-                name="name">
-            </li>
-            <li class="form__item text-input group-name__item">
-              <label for="weight" class="text-input__label form-label">Вес (кг):*</label>
-              <input type="text" class="text-input__input" value="7" id="weight" name="weight">
-            </li>
-            <li class="form__item text-input group-name__item">
-              <label for="age" class="text-input__label form-label">Возраст&nbsp;(лет):</label>
-              <input type="text" class="text-input__input" value="7" id="age" name="age">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__group group-program">
-          <ul class="form__list group-program__list">
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" id="lose-weight" name="lose-weight"
-                value="lose-weight">
-              <label for="lose-weight" class="radio__label form-label">Похудение</label>
-            </li>
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" id="gain-weight" name="gain-weight"
-                value="gain-weight">
-              <label for="gain-weight" class="radio__label form-label">Набор массы</label>
-            </li>
-            <li class="form__item group-program__item radio">
-              <input type="radio" class="radio__input visually-hidden" id="need-advice" name="need-advice"
-                value="need-advice">
-              <label for="need-advice" class="radio__label form-label">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form-group__container">
+          <fieldset class="form__group group-name">
+            <ul class="form__list group-name__list">
+              <li class="form__item text-input group-name__item">
+                <label for="name" class="text-input__label form-label">Имя:*</label>
+                <input type="text" class="text-input__input" value="Барсик" placeholder="Введите имя питомца" id="name"
+                  name="name">
+              </li>
+              <li class="form__item text-input group-name__item">
+                <label for="weight" class="text-input__label form-label">Вес (кг):*</label>
+                <input type="text" class="text-input__input" value="7" id="weight" name="weight">
+              </li>
+              <li class="form__item text-input group-name__item">
+                <label for="age" class="text-input__label form-label">Возраст&nbsp;(лет):</label>
+                <input type="text" class="text-input__input" value="7" id="age" name="age">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__group group-program">
+            <ul class="form__list group-program__list">
+              <li class="form__item group-program__item radio">
+                <input type="radio" class="radio__input visually-hidden" id="lose-weight" name="lose-weight"
+                  value="lose-weight">
+                <label for="lose-weight" class="radio__label form-label">Похудение</label>
+              </li>
+              <li class="form__item group-program__item radio">
+                <input type="radio" class="radio__input visually-hidden" id="gain-weight" name="gain-weight"
+                  value="gain-weight">
+                <label for="gain-weight" class="radio__label form-label">Набор массы</label>
+              </li>
+              <li class="form__item group-program__item radio">
+                <input type="radio" class="radio__input visually-hidden" id="need-advice" name="need-advice"
+                  value="need-advice">
+                <label for="need-advice" class="radio__label form-label">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="form__group group-contact">
           <legend class="special-title">
             <div class="special-title__container group-contact__title">
@@ -103,13 +107,15 @@
               <span class="special-title__text">Комментарий</span>
             </div>
           </legend>
-          <label class="text-input__label" for="message"></label>
-          <textarea class="text-input__input textarea" name="comment" id="message" maxlength="250"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="textarea-container">
+            <label class="text-input__label" for="message"></label>
+            <textarea class="text-input__input textarea" name="comment" id="message" maxlength="250"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form__group group-extra">
-          <legend class="special-title group-contact__title">
-            <div class="special-title__container extra-text-container">
+          <legend class="special-title extra-title">
+            <div class="special-title__container group-contact__title extra-text-container">
               <span class="special-title__text">Дополнительно</span>
             </div>
           </legend>

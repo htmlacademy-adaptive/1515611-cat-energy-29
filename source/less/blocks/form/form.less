@@ -27,6 +27,11 @@
     font-size: 20px;
     line-height: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 570px;
+  }
 }
 
 .form-text {
@@ -35,5 +40,30 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 7px 20px 48px 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    padding: 0;
+    align-self: center;
+  }
+}
+
+.form-group__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.form-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    width: 1220px;
+    margin: 0 auto 80px auto;
+    gap: 84px;
   }
 }
