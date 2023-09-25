@@ -1,15 +1,41 @@
-.group-contact {
-  padding-top: 25px;
-}
 
 .group-contact__title {
   margin-bottom: 35px;
 }
 
 .group-contact__list {
-  margin: 0 20px;
+  padding: 34px 20px 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 75px 70px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin: 0 auto;
+    width: 1220px;
+    gap: 81px;
+    padding: 76px 0 0 0;
+  }
 }
+
 
 .group-contact__item {
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .group-contact {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .group-contact {
+    margin-top: 59px;
+  }
 }

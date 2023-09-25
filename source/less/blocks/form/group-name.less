@@ -1,18 +1,30 @@
 .group-name {
-  padding: 0 20px 23px;
+  padding: 38px 20px 23px;
   border-bottom: 1px solid #d7d7d7;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 70px 0 70px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0 0 0;
+    border: none;
+  }
 }
 
 .group-name__item {
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .group-name__item:last-child {
   margin-bottom: 0;
 }
 
-@media (min-width: @tablet-width) {
-  .group-name {
-    padding: 0 70px 23px;
-  }
+.group-extra__item {
+  margin-top: 20px;
 }

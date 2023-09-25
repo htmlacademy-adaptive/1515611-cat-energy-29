@@ -1,0 +1,36 @@
+.checkbox-label {
+  font-family: "Oswald Regular", sans-serif;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.checkbox-input + .checkbox-label {
+  cursor: pointer;
+}
+
+.checkbox-input {
+  margin: 0;
+  appearance: none;
+  border: 1px solid #cdcdcd;
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.checkbox-input[type="checkbox"]:checked {
+  background: url("../images/icons/tick-form.svg") no-repeat center center;
+}
+

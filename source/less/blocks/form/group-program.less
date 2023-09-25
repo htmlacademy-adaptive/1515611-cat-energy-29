@@ -1,6 +1,16 @@
 .group-program {
-  padding: 20px 20px 18px;
+  padding: 15px 20px 53px 64px;
   border-bottom: 1px solid #d7d7d7;
+
+  @media (min-width: @tablet-width) {
+    padding: 73px 69px 0 69px;
+    min-height: 270px;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 66px 0 0 0;
+  }
 }
 
 .group-program__item {
@@ -9,4 +19,12 @@
 
 .group-program__item:last-child {
   margin-bottom: 0;
+}
+
+.group-program__list {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    min-height: 197px;
+    border: 1px solid #d7d7d7;
+  }
 }
