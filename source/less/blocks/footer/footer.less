@@ -74,3 +74,44 @@
     margin: -20px 121px 0 121px;
   }
 }
+
+.academy-icon {
+  fill:tomato;
+}
+
+.academy-icon:hover,
+.academy-icon:focus {
+  fill: #68b738;
+}
+
+.academy-icon:focus > .footer-site {
+  color: #68b738;
+}
+
+.academy-icon:active svg {
+  fill: #68b738;
+  opacity: 0.3;
+}
+
+.academy-icon:active > .footer-site {
+  opacity: 0.3;
+}
+
+
+.footer-socials__link {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:focus-visible::before {
+    background-color: #68b738;
+  }
+
+  &:active::before {
+    background-color: #68b738;
+    opacity: 0.3;
+  }
+}

@@ -40,6 +40,7 @@
 
   &::before {
     background-image: url("../images/photos/viewport-mobile, fat-state.png");
+    background-color: #cdcdcd;
   }
 }
 
@@ -114,6 +115,7 @@
   .slider__item--before {
     &::before {
       background-image: url("../images/photos/viewport-tablet,fat-state.png");
+      background-color: @basic-white;
     }
   }
 
@@ -150,19 +152,23 @@
   }
 
   .slider__item--before {
-    &::before {
-      background-image: url("../images/photos/viewport-tablet,fat-state.png");
-    }
     z-index: 5;
     width: 50%;
     transition: all 2s;
     overflow: hidden;
     border-right: 4px solid #666666;
+
+
+    &::before {
+      // background-color: linear-gradient(to bottom, transparent, transparent 160px, #eaeaea 160px, grey 100%);
+      background-image: url("../images/photos/viewport-tablet-fat-state.png");
+      background-color: tomato;
+    }
   }
 
   .slider__item--after {
     &::before {
-      background-image: url("../images/photos/viewport-tablet, slim-state.png");
+      background-image: url("../images/photos/viewport-tablet-slim-state.png");
     }
   }
 }

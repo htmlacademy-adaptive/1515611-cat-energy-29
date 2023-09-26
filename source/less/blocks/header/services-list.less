@@ -1,44 +1,103 @@
 
 .services-list {
-  display: block;
-  text-decoration: none;
-  background-color: #ffffff;
   .no-list-style();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    gap: 14px;
+    flex-direction: row;
+    gap: 33px;
+    position: relative;
+    bottom: 0;
     justify-content: flex-end;
-    margin-left: auto;
   }
-}
 
-.services-list__link {
-  .no-list-decor();
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  font-family: "Oswald Regular", sans-serif;
-  text-transform: uppercase;
-  display: block;
-  padding: 23px 10px 22px;
-  text-align: center;
-  color: @black;
-
-  @media (min-width: @tablet-width) {
-    color: #000000;
-    font-size: 18px;
-    line-height: 24px;
-    text-transform: uppercase;
+  @media (min-width: @desktop-width) {
+    right: -31px;
+    bottom: 21px;
+    gap: 34px;
   }
 }
 
 .services-list__item {
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.services-list__item:first-child {
   border-top: 1px solid #e6e6e6;
+  text-align: center;
+  padding: 24px 0 18px 0;
+
+  @media (min-width: @tablet-width) {
+    text-align: start;
+    border: none;
+  }
 }
 
+.services-list__item:last-child {
+  @media (max-width: @mobile-width) {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.services-list__link {
+  font-size: 20px;
+  text-decoration: none;
+  color: @basic-black;
+  font-family: "Oswald Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 22px 0 24px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 0 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.services-list__link:hover {
+  opacity: 0.6;
+  border-bottom: 2px solid #68b738;
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+    border-bottom: 2px solid @basic-white;
+  }
+}
+
+.services-list__link:focus {
+  outline: none;
+  opacity: 0.3;
+}
+
+.services-list__link:active {
+  color: @basic-black;
+}
+
+.services-list__link--special {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
+}
+
+.services-list__link--special:active {
+  @media (min-width: @desktop-width) {
+    opacity: unset;
+    color: @basic-white;
+  }
+}
+
+.site-list__link--active-special {
+  @media (min-width: @desktop-width) {
+    border-bottom: 5px solid @basic-white;
+  }
+}

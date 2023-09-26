@@ -2,6 +2,7 @@
 .hero {
   position: relative;
   margin: 0 auto;
+  z-index: -1;
 
   @media (min-width: @tablet-width) {
     width: 768px;
@@ -33,7 +34,7 @@
       width: 709px;
       height: 609px;
       position: absolute;
-      top: 231px;
+      top: 207px;
       left: 50%;
       transform: translateX(-50%);
       background-image: url("../images/photos/index-can-tablet.png");
@@ -53,7 +54,7 @@
       height: calc(100% + 115px);
       position: absolute;
       right: 0;
-      top: -118px;
+      top: -196px;
       background: url("../images/photos/green-cat-desktop-width.jpg") no-repeat left top;
       z-index: -2;
     }
@@ -73,6 +74,7 @@
       @media (min-resolution: 2dppx) {
         background-image: url("../images/photos/index-can-desktop@2x.png");
         background-position: top;
+        background-size: 76%;
       }
     }
   }
@@ -85,7 +87,7 @@
     width: 1440px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 74px 795px 0 0;
+    padding: 2px 795px 0 0;
   }
 }
 
@@ -152,7 +154,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    padding: 27px 104px 40px 119px;
+    padding: 7px 104px 40px 119px;
   }
 
   @media (min-width: @desktop-width) {

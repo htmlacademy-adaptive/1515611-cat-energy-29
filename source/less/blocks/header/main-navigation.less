@@ -1,51 +1,87 @@
 
-.main-navigation__toggle {
+.nav {
   position: absolute;
-  right: 23px;
-  top: -73px;
+  background: #ffffff;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    background: unset;
+    width: unset;
+  }
 }
 
-.main-nav--closed::before {
-  content: "";
-  position: absolute;
+.main-nav--opened .main-navigation__toggle {
+  background: url("../images/icons/cross.svg") no-repeat;
   width: 24px;
   height: 24px;
-  top: 20px;
-  right: 22px;
-  display: block;
-  background-color: #ffffff;
-  background-image: url("../images/icons/burger.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.main-nav--opened::after {
-  content: "";
-  display: block;
-  width: 21px;
-  height: 21px;
+  border: none;
   position: absolute;
-  top: 19px;
-  right: 22px;
-  background-image: url("../images/icons/cross.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
+  top: -44px;
+  right: 15px;
+  z-index: 2;
 
-@media (min-width: @tablet-width) {
-  .main-navigation {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-.main-navigation,
-.main-nav--closed {
+.main-nav--closed .main-navigation__toggle {
+  background: url("../images/icons/burger.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
+  position: absolute;
+  top: -45px;
+  right: 21px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.main-nav--closed .navigation__list-item {
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-navigation__wrapper {
   display: none;
 
-  &--active {
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+    bottom: 25px;
+  }
+}
+
+.main-nav--nojs {
+  @media (max-width: @mobile-width) {
+    position: relative;
+  }
+}
+
+.main-nav--nojs .main-navigation__toggle {
+  @media (max-width: @mobile-width) {
+    background: unset;
     display: none;
   }
 }
 
+.main-nav--nojs .navigation__list-item {
+  @media (max-width: @mobile-width) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .navigation__list-item:last-child {
+  @media (max-width: @mobile-width) {
+    border-bottom: none;
+  }
+}
