@@ -44,54 +44,52 @@ const scripts = () => {
 
 const optimizeImages = () => {
   return gulp
-    .src("source/img/**/*.{png,jpg}")
+    .src("source/images/**/*.{png,jpg}")
     .pipe(squoosh())
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/images"));
 };
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg}").pipe(gulp.dest("build/img"));
+  return gulp
+    .src("source/images/**/*.{png,jpg}")
+    .pipe(gulp.dest("build/images"));
 };
 
 // WebP
 
 const createWebp = () => {
   return gulp
-    .src("source/img/**/*.{png,jpg}")
+    .src("source/images/**/*.{png,jpg}")
     .pipe(
       squoosh({
         webp: {},
       })
     )
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/images"));
 };
 
 // SVG
 
 const svg = () =>
   gulp
-    .src(["source/img/*.svg", "!source/img/icons/*.svg"])
+    .src(["source/images/**/*.svg", "!source/images/icons/sprite.svg"])
     .pipe(svgo())
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/images"));
 
-const sprite = () => {
-  return gulp
-    .src("source/img/icons/*.svg")
-    .pipe(svgo())
-    .pipe(
-      svgstore({
-        inlineSvg: true,
-      })
-    )
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+const sprite = (done) => {
+  gulp
+    .src(["source/images/icons/sprite.svg"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("build"));
+  done();
 };
 
 // Copy
 
 const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico"], {
+    .src(["source/fonts/**/*.{woff2,woff}", "source/*.ico"], {
       base: "source",
     })
     .pipe(gulp.dest("build"));
