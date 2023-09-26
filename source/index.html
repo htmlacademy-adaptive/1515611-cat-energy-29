@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="" width=device-width, initial-scale="1">
   <title>HTML Academy: Кэт Энэрджи</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
@@ -24,20 +24,23 @@
             <img class="header__logo-img" src="./images/logos/header-logo.svg" alt="Функциональное питание для котов">
           </picture>
         </a>
-        <nav class="main-navigation main-nav--opened main-nav--nojs">
+        <nav class="main-navigation main-nav--closed nav main-nav--nojs">
           <button class="main-navigation__toggle " type="button">
             <span class="visually-hidden">Открыть выпадающее меню</span>
           </button>
           <div class="main-navigation__wrapper">
-            <ul class="main-navigation__list services-list services-list--active services-list--green">
-              <li class="services-list__item services-list__item--active">
-                <a class="services-list__link services-list__link--active" href="#">Главная</a>
+            <ul class="main-navigation__list services-list">
+              <li class="navigation-list__item services-list__item">
+                <a class="services-list__link services-list__link--active services-list__link--special services-list__link--active-special"
+                  href="#">Главная</a>
               </li>
-              <li class="services-list__item">
-                <a class="services-list__link" href="catalog.html">Каталог продукции</a>
+              <li class="navigation-list__item services-list__item">
+                <a class="services-list__link services-list__link--active services-list__link--special services-list__link--active-special"
+                  href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="services-list__item">
-                <a class="services-list__link" href="#">Подбор программы</a>
+              <li class="navigation-list__item services-list__item">
+                <a class="services-list__link services-list__link--active services-list__link--special services-list__link--active-special"
+                  href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
@@ -137,6 +140,7 @@
               <span class="visually-hidden">Кнопка переключения слайдера вправо/влево</span>
             </button>
           </div>
+        </div>
       </section>
     </main>
 
@@ -204,7 +208,7 @@
           <svg class="footer-site" width="112" height="15">
             <use xlink:href="images/icons/sprite.svg#footer-site"></use>
           </svg>
-          <svg width="27" height="34">
+          <svg class="academy-icon" width="27" height="34">
             <use xlink:href="images/icons/sprite.svg#academy-icon"></use>
           </svg>
         </a>

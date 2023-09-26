@@ -1,20 +1,18 @@
 
+const nav = document.querySelector('.nav');
+const menuButton = document.querySelector('.main-navigation__toggle');
+nav.classList.add('main-nav--closed');
+nav.classList.remove('main-nav--nojs');
 
-const mainNavToggle = document.querySelector('.main-navigation');
+menuButton.addEventListener('click', () => {
+    nav.classList.toggle('main-nav--closed');
+    nav.classList.toggle('main-nav--opened');
+});
+
+
 
 const sliderButton = document.querySelector('.slider__button');
 const slider = document.querySelector('.slider');
-
-mainNavToggle.addEventListener('click', function () {
-if (mainNavToggle.classList.contains('main-nav--closed')) {
-  mainNavToggle.classList.remove('main-nav--closed');
-  mainNavToggle.classList.add('main-nav--opened');
- }
- else {
-  mainNavToggle.classList.add('main-nav--closed');
-  mainNavToggle.classList.remove('main-nav--opened');
- }
-});
 
 if(sliderButton){
   sliderButton.addEventListener('click', () => {
